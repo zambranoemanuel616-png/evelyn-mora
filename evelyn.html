@@ -1,0 +1,925 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🌸 Evelyn Mora Suarez | 2B 🐶</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    /* FONDO AZUL */
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.25), transparent 25%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,.18), transparent 30%),
+        linear-gradient(135deg, #061b3a, #0b3d78, #1678b8, #69c9ed);
+
+    background-attachment: fixed;
+
+    color: #07345c;
+    overflow-x: hidden;
+}
+
+/* ==========================
+   FLORES AZULES DE FONDO
+========================== */
+
+.flower {
+    position: fixed;
+    font-size: 48px;
+    z-index: 0;
+    opacity: .8;
+    filter: drop-shadow(0 0 8px #8ee8ff);
+    animation: flotar 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Usamos flores azules mediante símbolos */
+.f1 { top:5%; left:2%; }
+.f2 { top:20%; right:3%; animation-delay:1s; }
+.f3 { top:55%; left:3%; animation-delay:2s; }
+.f4 { bottom:5%; right:3%; animation-delay:3s; }
+.f5 { bottom:30%; left:5%; animation-delay:1.5s; }
+.f6 { top:40%; right:6%; animation-delay:2.5s; }
+
+@keyframes flotar {
+
+    0%,100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(10deg);
+    }
+}
+
+
+/* ==========================
+   SNOOPY DECORATIVO
+========================== */
+
+.snoopy {
+    position: fixed;
+    font-size: 75px;
+    opacity: .16;
+    z-index: 0;
+    pointer-events: none;
+    filter: drop-shadow(0 0 10px #8de8ff);
+}
+
+.s1 {
+    top:10%;
+    left:15%;
+    transform:rotate(-15deg);
+}
+
+.s2 {
+    top:30%;
+    right:12%;
+    transform:rotate(12deg);
+}
+
+.s3 {
+    bottom:15%;
+    left:13%;
+    transform:rotate(-8deg);
+}
+
+.s4 {
+    bottom:5%;
+    right:15%;
+    transform:rotate(10deg);
+}
+
+
+/* ==========================
+   CONTENEDOR
+========================== */
+
+.contenedor {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 1050px;
+    margin: 35px auto;
+    text-align: center;
+}
+
+
+/* ==========================
+   ENCABEZADO
+========================== */
+
+header {
+
+    background: rgba(230,248,255,.93);
+
+    border-radius: 35px;
+
+    padding: 30px 20px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.35),
+        0 0 25px rgba(108,220,255,.5);
+
+    border: 3px solid #b8efff;
+}
+
+h1 {
+    font-size: 43px;
+    color: #07558b;
+    margin: 10px;
+}
+
+.curso {
+    font-size: 25px;
+    font-weight: bold;
+    color: #167bb5;
+}
+
+.snoopy-central {
+
+    font-size: 90px;
+
+    animation: saltar 2s infinite;
+
+    filter: drop-shadow(0 0 12px #61d8ff);
+}
+
+@keyframes saltar {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* ==========================
+   TARJETAS REDES
+========================== */
+
+.redes {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap: 22px;
+
+    margin-top: 30px;
+}
+
+.tarjeta {
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.96),
+        rgba(202,239,255,.95)
+    );
+
+    padding: 27px 15px;
+
+    border-radius: 25px;
+
+    border: 3px solid #9de9ff;
+
+    box-shadow:
+        0 8px 20px rgba(0,40,90,.35),
+        0 0 15px rgba(90,210,255,.3);
+
+    transition: .3s;
+}
+
+.tarjeta:hover {
+
+    transform:
+    translateY(-8px)
+    scale(1.04);
+
+    box-shadow:
+        0 15px 30px rgba(0,40,90,.4),
+        0 0 25px #6be3ff;
+}
+
+.icono {
+    font-size: 50px;
+}
+
+.tarjeta h2 {
+    color: #07558b;
+}
+
+.tarjeta a {
+
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border-radius: 20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #168bc5,
+        #07558b
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: .2s;
+}
+
+.tarjeta a:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+    0 0 15px #62dcff;
+}
+
+
+/* ==========================
+   SECCIONES DE JUEGOS
+========================== */
+
+.seccion {
+
+    margin-top: 35px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(240,252,255,.96),
+        rgba(190,233,250,.94)
+    );
+
+    padding: 30px;
+
+    border-radius: 30px;
+
+    border: 3px solid #a9ebff;
+
+    box-shadow:
+        0 8px 25px rgba(0,50,100,.35),
+        0 0 20px rgba(70,210,255,.3);
+}
+
+.seccion h2 {
+    color: #07558b;
+    font-size: 28px;
+}
+
+
+/* ==========================
+   SAKURA CLICK
+========================== */
+
+#sakura {
+
+    font-size: 80px;
+
+    cursor: pointer;
+
+    display: inline-block;
+
+    transition: .2s;
+
+    user-select: none;
+
+    filter:
+    drop-shadow(0 0 10px #54dfff);
+}
+
+#sakura:hover {
+
+    transform:
+    scale(1.15)
+    rotate(10deg);
+}
+
+#puntos {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #07558b;
+}
+
+
+/* ==========================
+   PIEDRA PAPEL TIJERA
+========================== */
+
+.botones button,
+.reset button {
+
+    border: none;
+
+    border-radius: 18px;
+
+    padding: 13px 18px;
+
+    margin: 7px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    background:
+    linear-gradient(
+        135deg,
+        #36aee2,
+        #08679c
+    );
+
+    color: white;
+
+    transition: .2s;
+}
+
+.botones button:hover,
+.reset button:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+    0 0 15px #59ddff;
+}
+
+#resultado {
+
+    margin-top: 15px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #07558b;
+}
+
+
+/* ==========================
+   ATRAPA FLORES
+========================== */
+
+#juegoFlores {
+
+    height: 280px;
+
+    position: relative;
+
+    background:
+    linear-gradient(
+        #8fe2ff,
+        #1c85bd
+    );
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    border: 3px solid white;
+
+    box-shadow:
+    inset 0 0 30px rgba(0,50,100,.3);
+}
+
+.florJuego {
+
+    position: absolute;
+
+    font-size: 40px;
+
+    cursor: pointer;
+
+    animation:
+    giro 1s infinite alternate;
+
+    filter:
+    drop-shadow(0 0 8px white);
+}
+
+@keyframes giro {
+
+    from {
+        transform:rotate(-10deg);
+    }
+
+    to {
+        transform:rotate(10deg);
+    }
+}
+
+#puntosFlores {
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    color: #07558b;
+}
+
+
+/* ==========================
+   MENSAJE
+========================== */
+
+.mensaje {
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    background:
+    rgba(225,249,255,.93);
+
+    border: 3px solid #a4eaff;
+
+    font-size: 21px;
+
+    font-style: italic;
+
+    box-shadow:
+    0 0 20px rgba(70,220,255,.3);
+}
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+
+    margin-top: 30px;
+
+    padding: 20px;
+
+    color: white;
+
+    text-shadow:
+    0 0 8px #00cfff;
+}
+
+
+/* ==========================
+   MOVIL
+========================== */
+
+@media(max-width:750px) {
+
+    .redes {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .seccion {
+        padding: 20px 12px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- FLORES AZULES -->
+<div class="flower f1">💠</div>
+<div class="flower f2">✿</div>
+<div class="flower f3">❀</div>
+<div class="flower f4">✿</div>
+<div class="flower f5">💠</div>
+<div class="flower f6">❀</div>
+
+
+<!-- SNOOPY -->
+<div class="snoopy s1">🐶</div>
+<div class="snoopy s2">🐶</div>
+<div class="snoopy s3">🐶</div>
+<div class="snoopy s4">🐶</div>
+
+
+<div class="contenedor">
+
+
+<header>
+
+<div class="snoopy-central">🐶</div>
+
+<h1>
+🌸 Evelyn Mora Suarez 🌸
+</h1>
+
+<div class="curso">
+CURSO: 2B
+</div>
+
+<p>
+💙 Bienvenidos a mi mundo azul 💙
+</p>
+
+</header>
+
+
+<!-- REDES -->
+
+<section class="redes">
+
+
+<div class="tarjeta">
+
+<div class="icono">📸</div>
+
+<h2>Instagram</h2>
+
+<p>@elyn_klz1</p>
+
+<a
+href="https://www.instagram.com/elyn_klz1?stkn=MTY4bXQ0c3p2aXY0cw=="
+target="_blank">
+
+✨ Visitar Instagram
+
+</a>
+
+</div>
+
+
+
+<div class="tarjeta">
+
+<div class="icono">🎵</div>
+
+<h2>TikTok</h2>
+
+<p>@ely_863</p>
+
+<a
+href="https://www.tiktok.com/@ely_863?_r=1&_t=ZS-9AJFpIIrpNn"
+target="_blank">
+
+🎵 Visitar TikTok
+
+</a>
+
+</div>
+
+
+
+<div class="tarjeta">
+
+<div class="icono">💬</div>
+
+<h2>WhatsApp</h2>
+
+<p>0979891630</p>
+
+<a
+href="https://wa.me/593979891630"
+target="_blank">
+
+💙 Agregarme
+
+</a>
+
+</div>
+
+
+</section>
+
+
+<!-- JUEGO SAKURA -->
+
+<section class="seccion">
+
+<h2>💠 Sakura Azul Click 💠</h2>
+
+<p>
+¡Haz clic en la flor azul tantas veces como puedas!
+</p>
+
+<div id="sakura"
+onclick="sakuraClick()">
+
+🌸
+
+</div>
+
+<p id="puntos">
+Pétalos conseguidos: 0
+</p>
+
+</section>
+
+
+
+<!-- PIEDRA PAPEL TIJERA -->
+
+<section class="seccion">
+
+<h2>🇯🇵 Piedra, Papel o Tijera 🇯🇵</h2>
+
+<p>
+¡Juega contra la computadora!
+</p>
+
+<div class="botones">
+
+<button onclick="jugar('piedra')">
+🪨 Piedra
+</button>
+
+<button onclick="jugar('papel')">
+📄 Papel
+</button>
+
+<button onclick="jugar('tijera')">
+✂️ Tijera
+</button>
+
+</div>
+
+<div id="resultado">
+Elige una opción para comenzar.
+</div>
+
+</section>
+
+
+
+<!-- ATRAPA FLORES -->
+
+<section class="seccion">
+
+<h2>💙 Atrapa las Flores Azules 💙</h2>
+
+<p>
+¡Haz clic en las flores antes de que desaparezcan!
+</p>
+
+<div id="juegoFlores"></div>
+
+<p id="puntosFlores">
+Flores atrapadas: 0
+</p>
+
+<div class="reset">
+
+<button onclick="iniciarFlores()">
+🌸 Comenzar juego
+</button>
+
+</div>
+
+</section>
+
+
+
+<div class="mensaje">
+
+💙🌸
+"Sonríe, disfruta cada momento y nunca dejes de soñar."
+🌸💙
+
+<br><br>
+
+🐶 💙 🌊 2B • Evelyn Mora Suarez 🌊 💙 🐶
+
+</div>
+
+
+<footer>
+
+🐾 Página de Evelyn Mora Suarez • Curso 2B 🐾
+<br>
+💙🌸 Mundo Azul • Snoopy • Sakura 🌸💙
+
+</footer>
+
+
+</div>
+
+
+<script>
+
+/* ==========================
+   SAKURA CLICK
+========================== */
+
+let puntos = 0;
+
+function sakuraClick() {
+
+    puntos++;
+
+    document.getElementById("puntos").innerText =
+    "Pétalos conseguidos: " + puntos;
+
+}
+
+
+/* ==========================
+   PIEDRA PAPEL TIJERA
+========================== */
+
+function jugar(jugador) {
+
+    const opciones =
+    ["piedra","papel","tijera"];
+
+    const computadora =
+    opciones[
+        Math.floor(
+            Math.random() * opciones.length
+        )
+    ];
+
+    let resultado = "";
+
+    if(jugador === computadora) {
+
+        resultado =
+        "🤝 ¡Empate! Los dos eligieron "
+        + computadora;
+
+    }
+
+    else if(
+
+        (jugador === "piedra" &&
+         computadora === "tijera") ||
+
+        (jugador === "papel" &&
+         computadora === "piedra") ||
+
+        (jugador === "tijera" &&
+         computadora === "papel")
+
+    ) {
+
+        resultado =
+        "🎉 ¡Ganaste! Tú: "
+        + jugador
+        + " | Computadora: "
+        + computadora;
+
+    }
+
+    else {
+
+        resultado =
+        "😄 ¡Ganó la computadora! Tú: "
+        + jugador
+        + " | Computadora: "
+        + computadora;
+
+    }
+
+    document.getElementById("resultado")
+    .innerText = resultado;
+
+}
+
+
+/* ==========================
+   ATRAPA FLORES
+========================== */
+
+let flores = 0;
+
+let intervaloFlores;
+
+
+function crearFlor() {
+
+    const zona =
+    document.getElementById(
+        "juegoFlores"
+    );
+
+    const flor =
+    document.createElement("div");
+
+    flor.className =
+    "florJuego";
+
+    /* FLORES AZULES */
+
+    const floresAzules =
+    ["💠","❄️","🔹","✿","❀"];
+
+    flor.innerText =
+    floresAzules[
+        Math.floor(
+            Math.random() *
+            floresAzules.length
+        )
+    ];
+
+    flor.style.left =
+    Math.random() * 90 + "%";
+
+    flor.style.top =
+    Math.random() * 75 + "%";
+
+
+    flor.onclick = function() {
+
+        flores++;
+
+        document.getElementById(
+            "puntosFlores"
+        ).innerText =
+        "Flores atrapadas: "
+        + flores;
+
+        flor.remove();
+
+    };
+
+
+    zona.appendChild(flor);
+
+
+    setTimeout(function() {
+
+        if(flor.parentElement) {
+
+            flor.remove();
+
+        }
+
+    },1500);
+
+}
+
+
+function iniciarFlores() {
+
+    clearInterval(intervaloFlores);
+
+    flores = 0;
+
+    document.getElementById(
+        "puntosFlores"
+    ).innerText =
+    "Flores atrapadas: 0";
+
+    document.getElementById(
+        "juegoFlores"
+    ).innerHTML = "";
+
+    intervaloFlores =
+    setInterval(
+        crearFlor,
+        700
+    );
+
+}
+
+
+/* ==========================
+   BIENVENIDA
+========================== */
+
+window.onload = function() {
+
+    setTimeout(function() {
+
+        alert(
+        "💙🌸 ¡Bienvenida a la página de Evelyn Mora Suarez! 🐶🌸"
+        );
+
+    },700);
+
+};
+
+</script>
+
+</body>
+</html>
+```
